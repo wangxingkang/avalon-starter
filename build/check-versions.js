@@ -28,7 +28,6 @@ const checks = function () {
   for (let i = 0; i < versionRequirements.length; i++) {
     let mod = versionRequirements[i];
 
-    console.log(mod);
     if (!semver.satisfies(mod.currentVersion, mod.versionRequirement)) {
       warnings.push(mod.name + ': ' +
         chalk.red(mod.currentVersion) + ' should be ' +
