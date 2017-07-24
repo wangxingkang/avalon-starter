@@ -1,16 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>avalon-starter</title>
 </head>
-<body>
-  <div :controller="test">
-    <input type="text" :duplex="@name">
-    <p>Hello,{{@name}}!</p>
-  </div>
+<body :controller="root">
+  <!-- 页面头部 -->
+  <div ms-widget="{is:'hth-header'}"></div>
+
+  <a href='#!/aaa'>aaa</a><br/>
+  <a href='#!/bbb'>bbb</a>
+
+  <div ms-html="@root"></div>
+  <!-- 页面尾部 -->
+
 </body>
 </html>
