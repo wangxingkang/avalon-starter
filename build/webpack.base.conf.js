@@ -34,24 +34,6 @@ const baseWebpackConfig = {
         include: [resolve('src'), resolve('test')]
       },
       {
-        test: /\.scss$/,
-        use: [
-          {
-            loader: "style-loader"
-          },
-          {
-            loader: "css-loader"
-          },
-          {
-            loader: "sass-loader"
-          }
-        ]
-      },
-      {
-        test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
-      },
-      {
         test: /\.html$/,
         loader: 'html-loader'
       },
