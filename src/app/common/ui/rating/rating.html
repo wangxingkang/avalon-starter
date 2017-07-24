@@ -1,0 +1,10 @@
+<label ms-mouseout="mouseOut()">
+    <span class="xk-icon"
+          :css="{ color: getColor($index), 'font-size': @size, 'margin-right': @margin }"
+          ms-click="select($index)"
+          ms-mouseover="mouseOver($index)"
+          ms-for="($index, el) in @list">
+      <i class="fa" :class="'fa-' + @content" aria-hidden="true"></i>
+      {{ floatValue > $index ? selectedContent : notSelectedContent | html}}
+    </span>
+</label>

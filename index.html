@@ -9,7 +9,10 @@
 </head>
 <body :controller="root">
   <!-- 页面头部 -->
-  <div ms-widget="{is:'hth-header'}"></div>
+  <xmp :widget="{is:'hth-header'}"></xmp>
+  <xmp :widget="{is:'xk-rating',options:@options,onSelect:@onSelect}"></xmp>
+
+  <br>
 
   <a href='#!/aaa'>aaa</a><br/>
   <a href='#!/bbb'>bbb</a>

@@ -5,11 +5,22 @@ import page1 from './page1.html';
 import page2 from './page2.html';
 
 import 'normalize.css';
+import 'font-awesome/css/font-awesome.css';
 import './styles/index.scss';
+
 
 const vm = avalon.define({
   $id: 'root',
-  root: ''
+  value: '1',
+  root: '',
+  options: {
+    size: 40,
+    content: 'star'
+  },
+  onSelect:  function(value) {
+    console.log(value);
+    vm.value = value
+  }
 });
 
 avalon.router.add('/aaa', function() {
