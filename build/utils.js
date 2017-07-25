@@ -62,6 +62,5 @@ exports.styleLoaders = function(options) {
     })
   }
 
-  console.log(output[1]);
   return output
 };
