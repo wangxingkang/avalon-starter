@@ -2,7 +2,7 @@ import avalon from 'avalon2';
 import template from './rate.html';
 import './rate.scss';
 
-export default avalon.component('xk-rate', {
+const rate = avalon.component('xk-rate', {
   template: template,
   defaults: {
     onInit: function () {
@@ -51,3 +51,5 @@ export default avalon.component('xk-rate', {
     }
   }
 });
+
+export default rate;

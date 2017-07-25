@@ -1,8 +1,16 @@
 # avalon-started
 
-
-
 ## 开发环境搭建依赖
-* [chalk](https://github.com/chalk/chalk) // 定制控制台日志的输入样式
-* [semver](https://github.com/npm/node-semver) // 语义化版本控制
-* [shelljs](https://github.com/shelljs/shelljs) // 调用系统命令
+
+1. 安装`node`
+2. 安装`yarn`(可选) --> 安装请查看[yarnpkg](https://yarnpkg.com/zh-Hans/)
+3. 执行`npm i` 或 `yarn`
+
+## 命令说明
+
+1. `yarn run dev` 或 `npm run dev`; 开发环境
+2. `yarn run build` 或 `npm run build`; 项目打包
+3. `yarn run unit` 或 `npm run unit`; 单元测试
+
+
+**持续完善中...**
