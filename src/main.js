@@ -14,7 +14,6 @@ const vm = avalon.define({
   value: '1',
   root: '',
   options: {
-    size: 40,
     content: 'star'
   },
   onSelect:  function(value) {
