@@ -1,9 +1,9 @@
+import 'babel-polyfill';
 import avalon from 'avalon2';
-import mmRouter from 'mmRouter';
-import common from './app/common';
+import 'mmRouter';
+import './app/common';
 import page1 from './page1.html';
 import page2 from './page2.html';
-
 import 'normalize.css';
 import 'font-awesome/css/font-awesome.css';
 import './styles/index.scss';
