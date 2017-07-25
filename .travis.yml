@@ -30,5 +30,5 @@ branches:
 
 env:
   global:
-    - GH_REF: github.com/wangxingkang/avalon-starter.git
+    - GH_REF: https://github.com/wangxingkang/avalon-starter.git
     - secure: "MO1ZB46AO4Q14/b/Jf0CwU0nYW+gyGckoB47PR/m48W3gzFzlEninLsIXEBsqT2hR21wcvULGTfGC1e2XEH0QELNVznTiqvTe0PutB8uUCqyp0jSKSi2vB3QWRmkeqFQ5dNKq6HRAgy8RPoHtBxO8S1VG0rHinalXSexlHlYky+DonfV1wN5xtzZYMoVDwCdWZcoJYvnGWqgjWsHuZi7bC2XDaFei3382n0gfcmTRgLEZKBuaBhHjk3f1PlZA19Z8RgH+JA4EN6RneRg6BPqvjRoWrjqQsFjvJXZshqpz2KADtfMlz8T5KtI/Z+Ej8VLpxrYE9xDd6juVRS00sP6mtEmeeyPOqN0INr0JLeQA/zK10zJnRyvOsgbpOSdqExvTM0YUwOkdEqGP3y/RCzKDmZfuH67CKZkMTNhIBxrr/CE0iaSF7wgWtiPSxT7S4m5ybgyj8EC0H7ijI5/DL+wzBKhRH2CgDDaVuQ/N9TSCl3/xfLVqIWAK2PK0kFLJ4CEVaqg0F4/vHHy4skQxxwVB1U7Xte9qtVWymQSOYtb1Ga7qm77Wz5zWtQPmjMGZXViGxHXprXOl3ijzqlT8YEb0ohLXa4B/Ja7a2D8NfwgfBYHVnq14FgLWdjXvbm0BS6TKLCyY1fvYFXvV84EhHYdVbAF/adAsgTb1z6A2isr+w0="
