@@ -1,24 +1,10 @@
-sudo: false
-# 指定运行环境
 language: node_js
+node_js: stable
 
+# Travis-CI Caching
 cache:
   directories:
     - node_modules
-
-# 指定nodejs版本，可以指定多个
-node_js:
-  - "6"
-
-#指定分支，只有指定的分支提交时才会运行脚本
-branches:
-  only:
-    - master
-
-env:
-  global:
-    - GH_REF: github.com/wangxingkang/avalon-starter.git
-    - secure: "MO1ZB46AO4Q14/b/Jf0CwU0nYW+gyGckoB47PR/m48W3gzFzlEninLsIXEBsqT2hR21wcvULGTfGC1e2XEH0QELNVznTiqvTe0PutB8uUCqyp0jSKSi2vB3QWRmkeqFQ5dNKq6HRAgy8RPoHtBxO8S1VG0rHinalXSexlHlYky+DonfV1wN5xtzZYMoVDwCdWZcoJYvnGWqgjWsHuZi7bC2XDaFei3382n0gfcmTRgLEZKBuaBhHjk3f1PlZA19Z8RgH+JA4EN6RneRg6BPqvjRoWrjqQsFjvJXZshqpz2KADtfMlz8T5KtI/Z+Ej8VLpxrYE9xDd6juVRS00sP6mtEmeeyPOqN0INr0JLeQA/zK10zJnRyvOsgbpOSdqExvTM0YUwOkdEqGP3y/RCzKDmZfuH67CKZkMTNhIBxrr/CE0iaSF7wgWtiPSxT7S4m5ybgyj8EC0H7ijI5/DL+wzBKhRH2CgDDaVuQ/N9TSCl3/xfLVqIWAK2PK0kFLJ4CEVaqg0F4/vHHy4skQxxwVB1U7Xte9qtVWymQSOYtb1Ga7qm77Wz5zWtQPmjMGZXViGxHXprXOl3ijzqlT8YEb0ohLXa4B/Ja7a2D8NfwgfBYHVnq14FgLWdjXvbm0BS6TKLCyY1fvYFXvV84EhHYdVbAF/adAsgTb1z6A2isr+w0="
 
 install:
   - npm install
@@ -35,5 +21,14 @@ after_script:
   - git config user.name "wangxingkang"
   - git config user.email "156148958@qq.com"
   - git add .
-  - git commit -m "publish gh-pages"
-  - git push -f "https://github.com/wangxingkang/avalon-starter.git" master:gh-pages
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - GH_REF: github.com/wangxingkang/avalon-starter.git
+    - secure: "MO1ZB46AO4Q14/b/Jf0CwU0nYW+gyGckoB47PR/m48W3gzFzlEninLsIXEBsqT2hR21wcvULGTfGC1e2XEH0QELNVznTiqvTe0PutB8uUCqyp0jSKSi2vB3QWRmkeqFQ5dNKq6HRAgy8RPoHtBxO8S1VG0rHinalXSexlHlYky+DonfV1wN5xtzZYMoVDwCdWZcoJYvnGWqgjWsHuZi7bC2XDaFei3382n0gfcmTRgLEZKBuaBhHjk3f1PlZA19Z8RgH+JA4EN6RneRg6BPqvjRoWrjqQsFjvJXZshqpz2KADtfMlz8T5KtI/Z+Ej8VLpxrYE9xDd6juVRS00sP6mtEmeeyPOqN0INr0JLeQA/zK10zJnRyvOsgbpOSdqExvTM0YUwOkdEqGP3y/RCzKDmZfuH67CKZkMTNhIBxrr/CE0iaSF7wgWtiPSxT7S4m5ybgyj8EC0H7ijI5/DL+wzBKhRH2CgDDaVuQ/N9TSCl3/xfLVqIWAK2PK0kFLJ4CEVaqg0F4/vHHy4skQxxwVB1U7Xte9qtVWymQSOYtb1Ga7qm77Wz5zWtQPmjMGZXViGxHXprXOl3ijzqlT8YEb0ohLXa4B/Ja7a2D8NfwgfBYHVnq14FgLWdjXvbm0BS6TKLCyY1fvYFXvV84EhHYdVbAF/adAsgTb1z6A2isr+w0="
