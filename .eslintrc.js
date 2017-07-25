@@ -6,9 +6,11 @@ module.exports = {
   },
   "env": {
     "browser": true,
-    "es6": true,
     "node": true
   },
+  "plugins": [
+    "html"
+  ],
   // 定义全局变量
   "globals": {
     "jQuery": true,
