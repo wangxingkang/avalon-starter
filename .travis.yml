@@ -36,4 +36,4 @@ after_script:
   - git config user.email "156148958@qq.com"
   - git add .
   - git commit -m "publish gh-pages"
-  - git push -f "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
+  - git push -f "https://${GH_REF}" master:gh-pages
