@@ -1,1 +1,2 @@
-import rating from './rate';
+import './rate';
+import './breadcrumb';

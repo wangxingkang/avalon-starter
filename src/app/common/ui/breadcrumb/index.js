@@ -1,8 +1,4 @@
 import avalon from 'avalon2';
-import template from './breadcrumb.html';
-import './breadcrumb.scss';
+import breadcrumb from './breadcrumb';
 
-avalon.component('xk-breadcrumb', {
-  template: template,
-  defaults: {}
-});
+avalon.component(breadcrumb.name, breadcrumb.component);
