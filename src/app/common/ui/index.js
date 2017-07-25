@@ -1,1 +1,1 @@
-import rating from './rating';
+import rating from './rate';

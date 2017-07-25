@@ -1,7 +1,8 @@
 import avalon from 'avalon2';
-import template from './rating.html';
+import template from './rate.html';
+import './rate.scss';
 
-export default avalon.component('xk-rating', {
+export default avalon.component('xk-rate', {
   template: template,
   defaults: {
     onInit: function () {

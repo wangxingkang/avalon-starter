@@ -1,6 +1,8 @@
-describe('登录组件测试', () => {
-  // 检查原始组件选项
-  it('测试用户登录', () => {
-    expect(4 + 5).to.be.equal(9);
+describe(' test some code ', function(){
+  let foo = 'foo';
+
+  it(' expect foo equal foo ', function(){
+    expect(foo).toEqual('foo');
   });
+
 });
