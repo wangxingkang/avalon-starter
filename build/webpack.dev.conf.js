@@ -16,7 +16,7 @@ function resolveApp(relativePath) {
   return path.resolve(relativePath);
 }
 
-const devWebpackConfig = merge(baseWebpackConfig, {
+const webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: [
       {
@@ -62,4 +62,4 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   ]
 });
 
-module.exports = devWebpackConfig;
+module.exports = webpackConfig;

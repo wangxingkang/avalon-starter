@@ -18,7 +18,7 @@ const config = {
     port: 8080,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
-    assetsPublicPath: './',
+    assetsPublicPath: '/',
     staticPath:'/static/',
     proxyTable: {},
     cssSourceMap: false
