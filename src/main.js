@@ -5,7 +5,7 @@ import './app/common';
 import page1 from './page1.html';
 import page2 from './page2.html';
 import 'normalize.css';
-import 'font-awesome/css/font-awesome.css';
+import 'font-awesome/scss/font-awesome.scss';
 import './styles/index.scss';
 
 

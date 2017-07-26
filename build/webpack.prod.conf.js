@@ -23,8 +23,8 @@ const webpackConfig = merge(baseWebpackConfig, {
   devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
     path: config.build.assetsRoot,
-    filename: utils.assetsPath('js/[name].[chunkhash].js'),
-    chunkFilename: utils.assetsPath('js/[id].[chunkhash].js')
+    filename: utils.assetsPath('js/[name].[chunkhash:10].js'),
+    chunkFilename: utils.assetsPath('js/[id].[chunkhash:10].js')
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -37,7 +37,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       sourceMap: true
     }),
     new ExtractTextPlugin({
-      filename: utils.assetsPath('css/[name].[contenthash].css')
+      filename: utils.assetsPath('css/[name].[contenthash:10].css')
     }),
     new OptimizeCSSPlugin({
       cssProcessorOptions: {
