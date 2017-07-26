@@ -12,12 +12,19 @@
     "lint": "eslint --ext .js src test/unit/specs"
   },
   "dependencies": {
+    "async-validator": "^1.7.1",
     "avalon2": "^2.2.9",
     "babel-runtime": "^6.23.0",
+    "es5-shim": "^4.5.9",
+    "es6-promise": "^4.1.1",
     "font-awesome": "^4.7.0",
     "jquery": "1.11.3",
     "mmRouter": "^0.9.6",
-    "normalize.css": "^7.0.0"
+    "moment": "^2.18.1",
+    "normalize.css": "^7.0.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0",
+    "rx": "^4.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
