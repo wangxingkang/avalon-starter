@@ -36,7 +36,7 @@ avalon.history.start({
 });
 
 const hash = location.hash.replace(/#!?/, '');
-avalon.router.navigate(hash || '/aaa', 1);
+// avalon.router.navigate(hash || '/aaa', 1);
 
 avalon.scan(document.body);
 
