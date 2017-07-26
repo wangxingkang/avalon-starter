@@ -8,7 +8,7 @@ const config = {
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
     productionSourceMap: true,
     productionGzip: false,
     productionGzipExtensions: ['js', 'css']
@@ -18,7 +18,7 @@ const config = {
     port: 8080,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
     staticPath:'/static/',
     proxyTable: {},
     cssSourceMap: false
