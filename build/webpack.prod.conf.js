@@ -13,6 +13,10 @@ const env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
   : config.build.env;
 
+function resolveApp(relativePath) {
+  return path.resolve(relativePath);
+}
+
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: utils.styleLoaders({
@@ -49,6 +53,7 @@ const webpackConfig = merge(baseWebpackConfig, {
         ? 'index.html'
         : config.build.index,
       template: 'index.html',
+      favicon: resolveApp('./favicon.ico'),
       inject: true,
       minify: {
         removeComments: true,

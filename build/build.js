@@ -4,13 +4,14 @@ const rm = require('rimraf');
 const chalk = require('chalk');
 const webpack = require('webpack');
 const config = require('../config');
-const webpackConfig = require('./webpack.prod.conf');
 const checkVersions = require('./check-versions');
 
 // 检查 node 和 npm 版本
 checkVersions();
 
 process.env.NODE_ENV = 'production';
+
+const webpackConfig = require('./webpack.prod.conf');
 
 const spinner = ora('building for production...');
 spinner.start();
