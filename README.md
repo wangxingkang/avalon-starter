@@ -1,8 +1,8 @@
 # avalon-started
 
-## 开发环境搭建依赖
-
 [![Build Status](https://travis-ci.org/wangxingkang/avalon-starter.svg?branch=master)](https://travis-ci.org/wangxingkang/avalon-starter)
+
+## 开发环境搭建依赖
 
 1. 安装`node`
 2. 安装`yarn`(可选) --> 安装请查看[yarnpkg](https://yarnpkg.com/zh-Hans/)
