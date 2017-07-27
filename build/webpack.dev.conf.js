@@ -23,13 +23,21 @@ const webpackConfig = merge(baseWebpackConfig, {
         test: /\.scss$/,
         use: [
           {
-            loader: "style-loader"
+            loader: 'style-loader'
           },
           {
-            loader: "css-loader"
+            loader: 'css-loader'
           },
           {
-            loader: "sass-loader"
+            loader: 'sass-loader'
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: (loader) => [
+                require('autoprefixer')({ browsers: ['ie>=8','>1% in CN'] })
+              ]
+            }
           }
         ]
       },
