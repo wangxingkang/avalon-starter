@@ -1,6 +1,6 @@
 {
   "name": "avalon-starter",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "avalon2单页面种子项目",
   "main": "index.js",
   "repository": "https://github.com/wangxingkang/avalon-starter.git",
