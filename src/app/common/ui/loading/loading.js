@@ -1,8 +1,7 @@
 import * as avalon from 'avalon2';
 
 avalon.directive('loading', {
-  init() {
-
+  init(cur, pre, binding) {
+    console.log(binding);
   }
-
 });
