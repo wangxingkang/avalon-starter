@@ -14,6 +14,8 @@
 
 avalon2 单页面应用开发种子项目
 
+AngularJS请移步[angularjs-starter](https://github.com/wangxingkang/angularjs-starter)
+
 ## 项目目录
 
 ```
