@@ -1,11 +1,11 @@
 import 'babel-polyfill';
+import 'es6-promise/auto';
 import avalon from 'avalon2';
 import 'mmRouter';
 import './app/common';
 import page1 from './page1.html';
 import page2 from './page2.html';
 import 'normalize.css';
-import 'font-awesome/scss/font-awesome.scss';
 import './styles/index.scss';
 
 

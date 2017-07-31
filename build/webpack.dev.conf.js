@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const es3ifyWebpackPlugin = require('es3ify-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 const utils = require('./utils');
@@ -47,12 +48,13 @@ const webpackConfig = merge(baseWebpackConfig, {
       }
     ]
   },
-  devtool: '#cheap-module-eval-source-map',
+  devtool: '#cheap-module-source-map',
   cache: true,
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),
+    new es3ifyWebpackPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       'jQuery': 'jquery'
@@ -61,8 +63,9 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.NoEmitOnErrorsPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'index.html',
+      template: 'index.ejs',
       favicon: resolveApp('favicon.ico'),
+      assetsPath: config.dev.assetsPublicPath,
       inject: true,
       path:config.dev.staticPath
     }),

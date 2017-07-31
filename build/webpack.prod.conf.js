@@ -5,6 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
+const es3ifyWebpackPlugin = require('es3ify-webpack-plugin');
 const baseWebpackConfig = require('./webpack.base.conf');
 const config = require('../config');
 const utils = require('./utils');
@@ -52,8 +53,9 @@ const webpackConfig = merge(baseWebpackConfig, {
       filename: process.env.NODE_ENV === 'testing'
         ? 'index.html'
         : config.build.index,
-      template: 'index.html',
+      template: 'index.ejs',
       favicon: resolveApp('./favicon.ico'),
+      assetsPath: config.build.assetsPublicPath,
       inject: true,
       minify: {
         removeComments: true,
@@ -78,6 +80,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       name: 'manifest',
       chunks: ['vendor']
     }),
+    new es3ifyWebpackPlugin(),
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, '../static'),
