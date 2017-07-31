@@ -49,7 +49,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       }
     ]
   },
-  devtool: 'source-map',
+  //devtool: 'source-map',
   cache: true,
   plugins: [
     new webpack.DefinePlugin({
@@ -100,7 +100,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       favicon: resolveApp('favicon.ico'),
       assetsPath: config.dev.assetsPublicPath,
       inject: true,
-      path:config.dev.staticPath
+      path: config.dev.staticPath
     }),
     new FriendlyErrorsPlugin()
   ]

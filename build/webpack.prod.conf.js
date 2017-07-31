@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 const es3ifyWebpackPlugin = require('es3ify-webpack-plugin');
+const ReplacePlugin = require('replace-bundle-webpack-plugin');
 const baseWebpackConfig = require('./webpack.base.conf');
 const config = require('../config');
 const utils = require('./utils');
@@ -37,9 +38,17 @@ const webpackConfig = merge(baseWebpackConfig, {
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
+        properties: false,
         warnings: false
       },
-      sourceMap: true
+      output: {
+        beautify: true,
+        quote_keys: true
+      },
+      mangle: {
+        screw_ie8: false
+      },
+      sourceMap: false
     }),
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash:10].css')
@@ -76,6 +85,17 @@ const webpackConfig = merge(baseWebpackConfig, {
         )
       }
     }),
+    new ReplacePlugin([{
+      partten: /Object\.defineProperty\((__webpack_exports__|exports),\s*"__esModule",\s*\{\s*value:\s*true\s*\}\);/g,
+      replacement: function (str, p1) {
+        return p1 + '.__esModule = true;';
+      }
+    }, {
+      partten: /\/\**\/\s*Object\.defineProperty\(exports,\s*name,\s*\{[^})]*\}\);/g,
+      replacement: function () {
+        return '/******/        exports[name] = getter;';
+      }
+    }]),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
       chunks: ['vendor']

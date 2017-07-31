@@ -20,7 +20,8 @@ const baseWebpackConfig = {
   resolve: {
     extensions: ['.js', '.json'],
     alias: {
-      '@': resolve('src')
+      '@': resolve('src'),
+      'avalon': 'avalon2'
     }
   },
   externals: {

@@ -1,5 +1,5 @@
 import 'babel-polyfill';
-import 'es6-promise/auto';
+import 'es6-promise/dist/es6-promise.auto';
 import avalon from 'avalon2';
 import 'mmRouter';
 import './app/common';

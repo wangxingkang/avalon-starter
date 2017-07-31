@@ -1444,6 +1444,10 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   version "1.1.0"
   resolved "http://registry.npm.taobao.org/console-control-strings/download/console-control-strings-1.1.0.tgz#3d7cf4464db6446ea644bf4b39507f9851008e8e"
 
+console-polyfill@^0.3.0:
+  version "0.3.0"
+  resolved "http://registry.npm.taobao.org/console-polyfill/download/console-polyfill-0.3.0.tgz#84900902a18c47a5eba932be75fa44d23e8af861"
+
 constants-browserify@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/constants-browserify/download/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
@@ -2035,6 +2039,12 @@ error-stack-parser@^2.0.0:
   dependencies:
     stackframe "^1.0.3"
 
+es3ify-loader@^0.2.0:
+  version "0.2.0"
+  resolved "http://registry.npm.taobao.org/es3ify-loader/download/es3ify-loader-0.2.0.tgz#8b8423576bdbd1ea39c59be130bcd6c58c461036"
+  dependencies:
+    es3ify "0.2.x"
+
 es3ify-webpack-plugin@^0.0.1:
   version "0.0.1"
   resolved "http://registry.npm.taobao.org/es3ify-webpack-plugin/download/es3ify-webpack-plugin-0.0.1.tgz#31de8ce4c094bf4426689367f375edf9cca9d174"
@@ -2043,7 +2053,7 @@ es3ify-webpack-plugin@^0.0.1:
     source-map "^0.5.6"
     webpack-sources "^0.1.2"
 
-es3ify@^0.2.2:
+es3ify@0.2.x, es3ify@^0.2.2:
   version "0.2.2"
   resolved "http://registry.npm.taobao.org/es3ify/download/es3ify-0.2.2.tgz#5dae3e650e5be3684b88066513d528d092629862"
   dependencies:
