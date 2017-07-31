@@ -5136,6 +5136,12 @@ repeating@^2.0.0:
   dependencies:
     is-finite "^1.0.0"
 
+replace-bundle-webpack-plugin@^1.0.0:
+  version "1.0.0"
+  resolved "http://registry.npm.taobao.org/replace-bundle-webpack-plugin/download/replace-bundle-webpack-plugin-1.0.0.tgz#56e81f70e1a6eb4f53f53c12522df1c6f1219658"
+  dependencies:
+    webpack-core "^0.6.8"
+
 request-progress@~2.0.1:
   version "2.0.1"
   resolved "http://registry.npm.taobao.org/request-progress/download/request-progress-2.0.1.tgz#5d36bb57961c673aa5b788dbc8141fdf23b44e08"
@@ -5570,7 +5576,7 @@ source-map@^0.1.41:
   dependencies:
     amdefine ">=0.0.4"
 
-source-map@^0.4.2, source-map@^0.4.4:
+source-map@^0.4.2, source-map@^0.4.4, source-map@~0.4.1:
   version "0.4.4"
   resolved "http://registry.npm.taobao.org/source-map/download/source-map-0.4.4.tgz#eba4f5da9c0dc999de68032d8b4f76173652036b"
   dependencies:
@@ -6072,6 +6078,13 @@ webpack-bundle-analyzer@^2.8.3:
     mkdirp "^0.5.1"
     opener "^1.4.3"
     ws "^2.3.1"
+
+webpack-core@^0.6.8:
+  version "0.6.9"
+  resolved "http://registry.npm.taobao.org/webpack-core/download/webpack-core-0.6.9.tgz#fc571588c8558da77be9efb6debdc5a3b172bdc2"
+  dependencies:
+    source-list-map "~0.1.7"
+    source-map "~0.4.1"
 
 webpack-dashboard@^0.4.0:
   version "0.4.0"
