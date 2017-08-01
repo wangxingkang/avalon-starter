@@ -25,7 +25,7 @@ const port = process.env.PORT || config.dev.port;
 const autoOpenBrowser = !!config.dev.autoOpenBrowser;
 const proxyTable = config.dev.proxyTable;
 
-const app = express(webpackConfig);
+const app = express();
 const compiler = webpack(webpackConfig);
 
 const devMiddleware = webpackDevMiddleware(compiler, {
