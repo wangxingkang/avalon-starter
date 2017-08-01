@@ -7,6 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin');
 const es3ifyWebpackPlugin = require('es3ify-webpack-plugin');
 const ReplacePlugin = require('replace-bundle-webpack-plugin');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 const baseWebpackConfig = require('./webpack.base.conf');
 const config = require('../config');
 const utils = require('./utils');
@@ -36,7 +37,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
-    new webpack.optimize.UglifyJsPlugin({
+    new UglifyJSPlugin({
       compress: {
         properties: false,
         warnings: false
