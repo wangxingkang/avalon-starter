@@ -33,6 +33,7 @@
     "slick-carousel": "^1.6.0"
   },
   "devDependencies": {
+    "@types/webpack": "2.2.16",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
@@ -96,6 +97,11 @@
     "shelljs": "^0.7.8",
     "style-loader": "^0.18.2",
     "text-loader": "^0.0.1",
+    "ts-loader": "^2.3.2",
+    "tslint": "^5.5.0",
+    "tslint-loader": "^3.5.3",
+    "typedoc": "^0.8.0",
+    "typescript": "^2.4.2",
     "uglifyjs-webpack-plugin": "^0.4.6",
     "url-loader": "^0.5.9",
     "webpack": "2.6.1",

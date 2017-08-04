@@ -30,6 +30,13 @@ const baseWebpackConfig = {
   module: {
     rules: [
       {
+        test: /\.ts$/,
+        include: [
+          path.resolve(__dirname, 'src')
+        ],
+        loader: 'ts-loader'
+      },
+      {
         test: /\.js$/,
         loader: 'babel-loader',
         include: [resolve('src'), resolve('test')]
