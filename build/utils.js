@@ -64,3 +64,8 @@ exports.styleLoaders = function(options) {
 
   return output
 };
+
+// 项目根目录
+const ROOT = path.resolve(__dirname, '..');
+const root = path.join.bind(path, ROOT);
+exports.root = root;

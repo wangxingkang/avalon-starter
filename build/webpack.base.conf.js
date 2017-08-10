@@ -2,10 +2,6 @@ const path = require('path');
 const utils = require('./utils');
 const config = require('../config');
 
-function resolve(dir) {
-  return path.join(__dirname, '..', dir)
-}
-
 const baseWebpackConfig = {
   entry: {
     app: './src/main.js'
@@ -20,7 +16,7 @@ const baseWebpackConfig = {
   resolve: {
     extensions: ['.js', '.json'],
     alias: {
-      '@': resolve('src'),
+      '@': utils.root('src'),
       'avalon': 'avalon2'
     }
   },
@@ -32,7 +28,10 @@ const baseWebpackConfig = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        include: [
+          utils.root('src'),
+          utils.root('test')
+        ]
       },
       {
         test: /\.html$/,
