@@ -14,10 +14,6 @@ Object.keys(baseWebpackConfig.entry).forEach(function(name) {
   baseWebpackConfig.entry[name] = ['./build/dev-client'].concat(baseWebpackConfig.entry[name]);
 });
 
-function resolveApp(relativePath) {
-  return path.resolve(relativePath);
-}
-
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
     rules: [
@@ -97,7 +93,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.ejs',
-      favicon: resolveApp('favicon.ico'),
+      favicon: utils.root('favicon.ico'),
       assetsPath: config.dev.assetsPublicPath,
       inject: true,
       path: config.dev.staticPath
